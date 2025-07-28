@@ -23,7 +23,6 @@ type Story = StoryObj<StoryProps>;
 export const Primary: Story = {
   args: {
     buttonText: "Primary Button",
-    className: "",
     variant: "primary",
   },
   render: ({ buttonText, ...args }) => <Button {...args}>{buttonText}</Button>,
@@ -32,7 +31,6 @@ export const Primary: Story = {
 export const SquarePrimary: Story = {
   args: {
     buttonText: "Primary Button",
-    className: "",
     variant: "primary",
     noRadius: true,
   },
@@ -42,18 +40,36 @@ export const SquarePrimary: Story = {
 export const DisabledPrimary: Story = {
   args: {
     buttonText: "Primary Button",
-    className: "",
     variant: "primary",
     disabled: true,
   },
   render: ({ buttonText, ...args }) => <Button {...args}>{buttonText}</Button>,
 };
 
-export const PrimaryIcon: Story = {
+export const JustIcon: Story = {
+  args: {
+    icon: (
+      <img
+        alt="icon"
+        className="h-4 w-4"
+        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/x-social-media-white-icon.png"
+      />
+    ),
+    variant: "primary",
+  },
+  render: ({ buttonText, ...args }) => <Button {...args}>{buttonText}</Button>,
+};
+
+export const IconAndText: Story = {
   args: {
     buttonText: "Primary Button",
-    className: "",
-    icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/x-social-media-white-icon.png",
+    icon: (
+      <img
+        alt="icon"
+        className="h-4 w-4"
+        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/x-social-media-white-icon.png"
+      />
+    ),
     variant: "primary",
   },
   render: ({ buttonText, ...args }) => <Button {...args}>{buttonText}</Button>,
