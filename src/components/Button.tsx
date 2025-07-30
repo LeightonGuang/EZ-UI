@@ -1,12 +1,12 @@
 import type { PropsWithChildren } from "react";
 
 type ButtonProps = PropsWithChildren<{
-  className: string;
+  className?: string;
   icon?: React.ReactNode;
   variant: "primary" | "secondary" | "ghost" | "warning";
   noRadius?: boolean;
   disabled?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
 }>;
 
 const Button = ({
@@ -29,9 +29,9 @@ const Button = ({
     <button
       className={`text-sm leading-tight font-normal ${
         variant == "primary"
-          ? `bg-blue-600 text-white ${!buttonDisabled && "hover:bg-blue-700"}`
+          ? `bg-[#E8AE68] text-black ${!buttonDisabled && "hover:opacity-85"}`
           : variant == "secondary"
-            ? `bg-gray-100 text-gray-800 ${!buttonDisabled && "hover:bg-gray-200"}`
+            ? `bg-[#6894E8] text-white ${!buttonDisabled && "hover:opacity-85"}`
             : variant == "ghost"
               ? `border border-blue-600 text-blue-600 ${!buttonDisabled && "hover:bg-blue-50"}`
               : variant == "warning"
