@@ -9,6 +9,7 @@ type StoryProps = ComponentProps<typeof Button> & { buttonText: string };
 const meta: Meta<StoryProps> = {
   component: Button,
   argTypes: {
+    noRadius: { control: { type: "boolean" } },
     variant: {
       options: ["primary", "secondary", "ghost", "warning"],
       control: { type: "select" },
